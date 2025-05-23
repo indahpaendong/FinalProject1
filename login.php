@@ -28,3 +28,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   Password: <input type="password" name="password"><br>
   <button type="submit">Login</button>
 </form>
+
+$password = md5($_POST['password']);
+
