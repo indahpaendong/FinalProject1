@@ -45,5 +45,5 @@ while ($row = $result->fetch_assoc()) {
 }
 echo "</table>";
 
-echo "<br><a href='paket.php'>➕ Tambah Paket Studio</a>";
+echo "<br><a href='tambah_paket.php'>➕ Tambah Paket Studio</a>";
 ?>
