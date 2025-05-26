@@ -1,8 +1,11 @@
+<<<<<<< HEAD
+=======
 <?php
 // Anda bisa menambahkan PHP logic di sini jika diperlukan
 // Misalnya: session check, database connection, dll.
 ?>
 
+>>>>>>> c211a72c6d5591e58dc4f8a7d63854fb712604b7
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -310,5 +313,13 @@
             <p>Kelompok 5 - Indah Paendong, Yusi Meilany Kendek Allo & Afny Rewur</p>
         </footer>
     </div>
+<<<<<<< HEAD
+  </main>
+
+  <footer>
+    <p>Kelompok 5 - Indah Paendong & Yusi Meilany Kendek Allo & Afny Rewur</p>
+  </footer>
+=======
+>>>>>>> c211a72c6d5591e58dc4f8a7d63854fb712604b7
 </body>
 </html>
