@@ -1,31 +1,24 @@
-<h1>Selamat datang di Sistem Booking Studio</h1>
-<a href="register.php">Daftar</a> | 
-<a href="login.php">Login</a>
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sistem Booking Studio Foto</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"> <!-- Hubungkan CSS -->
 </head>
 <body>
-  <header>
+  <div class="container">
     <h1>Selamat Datang di Sistem Booking Studio Foto</h1>
-  </header>
-
-  <main>
     <p>Pesan studio foto dengan mudah dan cepat!</p>
 
     <div class="btn-group">
-      <a href="register.php" class="btn btn-primary">Daftar</a>
+      <a href="register.php" class="btn">Daftar</a>
       <a href="login.php" class="btn btn-secondary">Login</a>
     </div>
-  </main>
 
-  <footer>
-    <p>Kelompok 5 - Indah Paendong & Yusi Meilany Kendek Allo</p>
-  </footer>
+    <footer>
+      <p>Kelompok 5 - Indah Paendong, Yusi Meilany Kendek Allo & Afny Rewur</p>
+    </footer>
+  </div>
 </body>
 </html>
