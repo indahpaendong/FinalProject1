@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html>
 <head>
     <title>Login - Booking Studio</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="stylelogin.css">
 </head>
 <body>
     <h2>Login</h2>
