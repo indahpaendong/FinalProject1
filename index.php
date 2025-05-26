@@ -1,7 +1,3 @@
-<h1>Selamat datang di Sistem Booking Studio</h1>
-<a href="register.php">Daftar</a> | 
-<a href="login.php">Login</a>
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -25,7 +21,7 @@
   </main>
 
   <footer>
-    <p>Kelompok 5 - Indah Paendong & Yusi Meilany Kendek Allo</p>
+    <p>Kelompok 5 - Indah Paendong & Yusi Meilany Kendek Allo & Afny Rewur</p>
   </footer>
 </body>
 </html>
