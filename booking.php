@@ -918,7 +918,7 @@ if ($row['total'] > 0) {
             timeSlotsGrid.innerHTML = '<div class="loading-spinner"></div><span style="color: rgba(255,255,255,0.8); margin-left: 10px;">Memuat jam tersedia...</span>';
             
             // Fetch available times
-            fetch(`?action=get_available_times&date=${dateInput.value}&studio=${studioSelect.value}&package=${currentPackage}`)
+            fetch(?action=get_available_times&date=${dateInput.value}&studio=${studioSelect.value}&package=${currentPackage})
                 .then(response => response.json())
                 .then(data => {
                     displayTimeSlots(data);
@@ -946,7 +946,7 @@ if ($row['total'] > 0) {
             
             allSlots.forEach(slot => {
                 const slotElement = document.createElement('div');
-                slotElement.className = `time-slot ${slot.available ? 'available' : 'unavailable'}`;
+                slotElement.className = time-slot ${slot.available ? 'available' : 'unavailable'};
                 slotElement.innerHTML = `
                     <div style="font-size: 0.9rem; font-weight: bold;">${slot.start} - ${slot.end}</div>
                     <div style="font-size: 0.8rem; opacity: 0.8;">${slot.available ? 'Tersedia' : 'Terbooked'}</div>
@@ -1050,7 +1050,7 @@ if ($row['total'] > 0) {
         // Notification for booking conflicts
         function showNotification(message, type = 'info') {
             const notification = document.createElement('div');
-            notification.className = `alert alert-${type}`;
+            notification.className = alert alert-${type};
             notification.style.position = 'fixed';
             notification.style.top = '20px';
             notification.style.right = '20px';
@@ -1089,7 +1089,7 @@ if ($row['total'] > 0) {
         window.addEventListener('load', function() {
             const urlParams = new URLSearchParams(window.location.search);
             if (urlParams.get('conflict')) {
-                showNotification('⚠️ Waktu yang Anda pilih sudah dibooking oleh orang lain. Silakan pilih waktu lain.', 'error');
+                showNotification('⚠ Waktu yang Anda pilih sudah dibooking oleh orang lain. Silakan pilih waktu lain.', 'error');
             }
         });
 
