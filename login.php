@@ -14,20 +14,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['user_id'] = $row['id'];
             $_SESSION['role'] = $row['role'];
             header("Location: " . ($row['role'] === 'admin' ? "dashboard.php" : "booking.php"));
+            exit();
         } else {
-            echo "Password salah";
+            $error = "Password salah";
         }
     } else {
-        echo "Email tidak ditemukan";
+        $error = "Email tidak ditemukan";
     }
 }
 ?>
 
-<form method="POST">
-  Email: <input name="email"><br>
-  Password: <input type="password" name="password"><br>
-  <button type="submit">Login</button>
-</form>
-
-$password = md5($_POST['password']);
-
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - Booking Studio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h2>Login</h2>
+    <?php if (isset($error)) echo "<p style='color:red;'>$error</p>"; ?>
+    <form method="POST" action="">
+        <label>Email:</label><br>
+        <input type="email" name="email" required><br><br>
+        <label>Password:</label><br>
+        <input type="password" name="password" required><br><br>
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
