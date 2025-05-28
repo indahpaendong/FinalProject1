@@ -1,0 +1,167 @@
+/* Reset dasar */
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body dan layout utama */
+body {
+    background-color: #f9faff;
+    padding: 30px;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* Link kembali ke dashboard */
+a[href="dashboard.php"] {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #5a4dbc;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a[href="dashboard.php"]:hover {
+    color: #3f2f96;
+}
+
+/* Judul halaman */
+h2 {
+    margin-bottom: 20px;
+    color: #4a3c8c;
+    font-weight: 700;
+}
+
+/* Form styling */
+form {
+    background: #fff;
+    padding: 20px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgb(74 60 140 / 0.1);
+    max-width: 400px;
+    margin-bottom: 40px;
+}
+
+/* Label form */
+form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #4a3c8c;
+}
+
+/* Input text dan number */
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border: 1.5px solid #b2afc9;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #5a4dbc;
+    outline: none;
+}
+
+/* Tombol submit dan button */
+input[type="submit"],
+button,
+a {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    user-select: none;
+}
+
+/* Tombol tambah dan update */
+input[type="submit"] {
+    background-color: #5a4dbc;
+    color: white;
+    width: 100%;
+}
+input[type="submit"]:hover {
+    background-color: #3f2f96;
+}
+
+/* Link batal (mirip button) */
+form a {
+    display: inline-block;
+    margin-left: 15px;
+    color: #7a6ed1;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 16px;
+    background-color: #e5e3f7;
+    border-radius: 5px;
+    vertical-align: middle;
+}
+form a:hover {
+    background-color: #d0c9f3;
+    color: #4a3c8c;
+}
+
+/* Table styling */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 700px;
+    background: white;
+    box-shadow: 0 4px 10px rgb(74 60 140 / 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Header tabel */
+thead tr {
+    background-color: #5a4dbc;
+    color: #fff;
+    font-weight: 700;
+    text-align: left;
+}
+
+/* Sel header */
+th, td {
+    padding: 14px 18px;
+}
+
+/* Baris ganjil */
+tbody tr:nth-child(odd) {
+    background-color: #f6f5fb;
+}
+
+/* Hover pada baris */
+tbody tr:hover {
+    background-color: #dadaf5;
+}
+
+/* Link aksi di tabel */
+td a {
+    text-decoration: none;
+    color: #5a4dbc;
+    font-weight: 600;
+    margin-right: 12px;
+    transition: color 0.3s ease;
+}
+
+/* Hover aksi */
+td a:hover {
+    color: #3f2f96;
+}
+
+/* Link hapus berbeda warna */
+td a.delete {
+    color: #d9534f;
+}
+td a.delete:hover {
+    color: #b52b27;
+}
