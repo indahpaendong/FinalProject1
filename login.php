@@ -13,8 +13,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (password_verify($pass, $row['password'])) {
             $_SESSION['user_id'] = $row['id'];
             $_SESSION['role'] = $row['role'];
-            header("Location: " . ($row['role'] === 'admin' ? "dashboard.php" : "booking.php"));
-            exit();
+
+            // Redirect berdasarkan role
+            if ($row['role'] === 'admin') {
+                header("Location: dashboard.php");
+                exit();
+            } else {
+                header("Location: booking.php");
+                exit();
+            }
         } else {
             $error = "Password salah";
         }
@@ -23,6 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="id">
