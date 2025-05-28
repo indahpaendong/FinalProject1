@@ -51,9 +51,92 @@ $conn->query("UPDATE bookings SET is_seen = 1 WHERE id = " . $row['id']);
   <h1>Booking Studio Foto</h1>
 
   <!-- Langsung tampilkan form booking tanpa daftar paket -->
-
     <form id="bookingForm">
   <input type="hidden" name="user_id" value="<?= $user_id ?>">
+
+                    <?php if (strpos($message, 'error:') === 0): ?>
+                        <div class="alert alert-error">
+                            <?php echo substr($message, 7); ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                
+                <form method="POST" id="bookingForm">
+                    <input type="hidden" name="package" value="<?php echo $selected_package; ?>">
+                    <input type="hidden" name="waktu_mulai" id="hiddenWaktuMulai">
+                    <input type="hidden" name="waktu_selesai" id="hiddenWaktuSelesai">
+                    
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap:</label>
+                        <input type="text" name="nama" id="nama" placeholder="Masukkan nama lengkap" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="hp">Nomor HP:</label>
+                        <input type="tel" name="hp" id="hp" placeholder="08xx-xxxx-xxxx" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tanggal">Tanggal Booking:</label>
+                        <input type="date" name="tanggal" id="tanggal" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="jenis_studio">Jenis Studio:</label>
+                        <select name="jenis_studio" id="jenis_studio" required>
+                            <select name="jenis_studio" id="jenis_studio" required>
+                            <option value="">Pilih Jenis Studio</option>
+                            <option value="indoor">Studio Indoor</option>
+                            <option value="outdoor">Studio Outdoor</option>
+                            <option value="vintage">Studio Vintage</option>
+                            <option value="modern">Studio Modern</option>
+                            <option value="minimalis">Studio Minimalis</option>
+                        </select>
+                        <button type="submit">Update</button>
+                    </form>
+                </td>
+            </tr>
+        <?php endwhile; ?>
+    <?php else: ?>
+        <tr><td colspan="10">Tidak ada pemesanan.</td></tr>
+    <?php endif; ?>
+    </tbody>
+</table>
+
+                    </div>
+                    
+                    <!-- Time Selection Section -->
+                    <div class="form-group time-selection">
+                        <label>Pilih Waktu:</label>
+                        <div class="time-slots-container" id="timeSlotsContainer" style="display: none;">
+                            <div class="time-slots-header">
+                                <h4 style="color: white; margin: 0;">Waktu Tersedia</h4>
+                                <div class="legend">
+                                    <div class="legend-item">
+                                        <div class="legend-color legend-available"></div>
+                                        <span>Tersedia</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <div class="legend-color legend-unavailable"></div>
+                                        <span>Tidak Tersedia</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="time-slots-grid" id="timeSlotsGrid">
+                                <!-- Time slots will be loaded here -->
+                            </div>
+                        </div>
+                        <div id="loadingMessage" style="display: none; text-align: center; color: rgba(255,255,255,0.8); padding: 1rem;">
+                            <div class="loading-spinner"></div>
+                            <span style="margin-left: 0.5rem;">Memuat waktu tersedia...</span>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" name="submit_booking" id="submitBtn" disabled>
+                        Buat Booking
+                    </button>
+                </form>
+            </div>
 
   <div class="form-group">
     <label for="nama_lengkap">Nama Lengkap</label>
