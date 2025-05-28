@@ -1,11 +1,9 @@
-<<<<<<< HEAD
-=======
+
 <?php
 // Anda bisa menambahkan PHP logic di sini jika diperlukan
 // Misalnya: session check, database connection, dll.
 ?>
 
->>>>>>> c211a72c6d5591e58dc4f8a7d63854fb712604b7
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -301,8 +299,8 @@
 </head>
 <body>
     <div class="container">
-        <h1>Selamat Datang di Sistem Booking Studio Foto</h1>
-        <p>Pesan studio foto dengan mudah dan cepat!</p>
+        <h1>Hallo Welcome to <br>AYI Studio Photo</br></h1>
+        <p>Experience the art of capturing memories with ease and grace. Book your photo studio session effortlessly, and let us help you turn every moment into a timeless masterpiece fast, simple, and beautifully seamless.</p>
         
         <div class="btn-group">
             <a href="register.php" class="btn">Daftar</a>
@@ -313,13 +311,6 @@
             <p>Kelompok 5 - Indah Paendong, Yusi Meilany Kendek Allo & Afny Rewur</p>
         </footer>
     </div>
-<<<<<<< HEAD
-  </main>
-
-  <footer>
-    <p>Kelompok 5 - Indah Paendong & Yusi Meilany Kendek Allo & Afny Rewur</p>
-  </footer>
-=======
->>>>>>> c211a72c6d5591e58dc4f8a7d63854fb712604b7
+  </main>  
 </body>
 </html>
