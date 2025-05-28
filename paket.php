@@ -53,9 +53,25 @@ $result = $conn->query("SELECT * FROM paket");
 $editData = null;
 if (isset($_GET['edit'])) {
     $id = $_GET['edit'];
-    $resEdit = $conn->query("SELECT * FROM paket WHERE id=$id");
-    $editData = $resEdit->fetch_assoc();
+
+    // Pastikan $id adalah angka (integer)
+    if (!is_numeric($id)) {
+        $editData = null;
+    } else {
+        $stmt = $conn->prepare("SELECT * FROM paket WHERE id = ?");
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $resEdit = $stmt->get_result();
+
+        if ($resEdit && $resEdit->num_rows > 0) {
+            $editData = $resEdit->fetch_assoc();
+        } else {
+            $editData = null;
+        }
+        $stmt->close();
+    }
 }
+
 
 ?>
 
@@ -63,6 +79,7 @@ if (isset($_GET['edit'])) {
 <html>
 <head>
     <title>Kelola Paket Studio</title>
+    <link rel="stylesheet" href="css/style-paket.css">
     <style>
         table { border-collapse: collapse; width: 60%; margin-bottom: 20px; }
         th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
